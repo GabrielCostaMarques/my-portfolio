@@ -19,6 +19,7 @@ export default function Header(){
                 <nav>
                     <a href="#overview">OVERVIEW</a>
                     <a href="#projetos">PROJETOS</a>
+                    <a href="#projetos">TESTE</a>
 
                     {/* <div className='' >
                         <input type="checkbox" name="toggleColor" id="toggle" />
