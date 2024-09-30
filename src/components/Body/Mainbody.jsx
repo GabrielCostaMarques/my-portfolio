@@ -1,5 +1,5 @@
 import style from '../style/MainBody.module.css'
-
+import img from '../../assets/fotoPerfilPortifolio.png'
 
 
 export default function MainBody() {
@@ -19,7 +19,7 @@ export default function MainBody() {
             </div>
 
             <div className={style.MainBodyContent_right}>
-                <img src="./fotoPerfilPortifolio.png" alt="Imagem de Perfil" />
+                <img src={img} alt="Imagem de Perfil" />
             </div>
         </section>
     )

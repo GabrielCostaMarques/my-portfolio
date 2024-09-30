@@ -1,6 +1,6 @@
 import style from '../style/MainBody.module.css';
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin, AiFillFacebook } from "react-icons/ai";
-
+import imgAbout from '../../assets/FotoAboutMe.png'
 
 
 export default function AboutMe() {
@@ -8,7 +8,7 @@ export default function AboutMe() {
         <section id='overview' className={style.BodyMain}>
             
             <div className={style.MainBodyContent_right}>
-                <img src="./FotoAboutMe.png" alt="Imagem de Perfil" />
+                <img src={imgAbout} alt="Imagem de Perfil" />
             </div>
             <div className={style.MainBodyContent_left}>
                 <h1 className={style.slideInUp}>About me</h1>
