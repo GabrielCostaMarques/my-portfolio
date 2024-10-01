@@ -10,6 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
+      - name: Debug
+        - shell: bash
+        run: |
+          echo "FTP_HOST: ${{ secrets.FTP_HOST }}"
+          echo "FTP_USERNAME: ${{ secrets.FTP_USERNAME }}"
+
+
       # Checkout do repositório
       - name: Checkout code
         uses: actions/checkout@v4
@@ -24,16 +32,11 @@ jobs:
       # Fazer o deploy via FTP para a Hostinger
       - name: Deploy to FTP server
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
-        env:
+        with:
           server: ${{ secrets.FTP_SERVER }}  # O servidor FTP da Hostinger
           username: ${{ secrets.FTP_USER }}  # Nome de usuário FTP (adicionado nos secrets)
           password: ${{ secrets.FTP_PASSW }}  # Senha FTP (adicionado nos secrets)
           local-dir: dist  # Diretório local onde está o build
           server-dir: /public_html/  # Diretório remoto no servidor FTP
           port: 21
-
-      - name: Debug
-        run: |
-          echo "FTP_HOST: ${{ secrets.FTP_HOST }}"
-          echo "FTP_USERNAME: ${{ secrets.FTP_USERNAME }}"
 
