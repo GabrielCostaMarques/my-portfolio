@@ -12,14 +12,14 @@ jobs:
     steps:
       # Checkout do repositório
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       # Instalar dependências e construir o projeto
       - name: Install dependencies
         run: npm install
 
       - name: Build the project
-        run: npx vite build
+        run: npm run build
 
       # Fazer o deploy via FTP para a Hostinger
       - name: Deploy to FTP server
