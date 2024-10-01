@@ -6,35 +6,16 @@ on:
       - main  # Defina o branch que você quer usar para deploy (ex: main)
 
 jobs:
-  deploy:
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
-
     steps:
-      # Debug para verificar os secrets
-      - name: Debug
-        shell: bash
-        run: |
-          echo "FTP_HOST: ${{ secrets.FTP_SERVER }}"
-          echo "FTP_USERNAME: ${{ secrets.FTP_USER }}"
-
-      # Checkout do repositório
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      # Instalar dependências e construir o projeto
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build the project
-        run: npm run build
-
-      # Fazer o deploy via FTP para a Hostinger
-      - name: Deploy to FTP server
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
-        with:
-          server: ftp://portifoliogabrielmarques.com  # O servidor FTP da Hostinger
-          username: u608914209   # Nome de usuário FTP (adicionado nos secrets)
-          password: lAGAVI30!   # Senha FTP (adicionado nos secrets)
-          local-dir: dist/                      # Diretório local onde está o build
-          server-dir: /public_html/            # Diretório remoto no servidor FTP
-          port: 21                             # Porta do servidor FTP
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v4
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ftp://portifoliogabrielmarques.com
+        username: u608914209
+        password: Gabriel25422!
