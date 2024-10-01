@@ -30,7 +30,7 @@ jobs:
 
       # Fazer o deploy via FTP para a Hostinger
       - name: Deploy to FTP server
-        uses: SamKirkland/FTP-Deploy-Action@4.3.5
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: ftp://portifoliogabrielmarques.com  # O servidor FTP da Hostinger
           username: u608914209   # Nome de usuário FTP (adicionado nos secrets)
