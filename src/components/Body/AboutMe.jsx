@@ -13,8 +13,7 @@ export default function AboutMe() {
             <div className={style.MainBodyContent_left}>
                 <h1 className={style.slideInUp}>About me</h1>
                 <h3 className={style.slideInUp}>_________________</h3>
-                <p className={style.slideInUp}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam esse aperiam sed aut atque! Veritatis ipsa, unde minima expedita fugit ad dicta neque cumque in perferendis voluptatem, eos ducimus rem.</p>
-
+                    <p className={style.slideInUp}>quero fazer esse teste mas nada funciona
                 <div >
                     <AiFillGithub className={style.icons} />
                     <AiFillInstagram className={style.icons} />
