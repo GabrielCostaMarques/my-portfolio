@@ -30,3 +30,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}  # Senha FTP (adicionado nos secrets)
           local-dir: dist  # Diretório local onde está o build
           server-dir: /public_html/  # Diretório remoto no servidor FTP
+          port: 21
