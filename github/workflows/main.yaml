@@ -1,0 +1,20 @@
+name: Deploy para Branch de Release
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Executar testes
+        run: npm test
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: main 
+          folder: dist
+          clean: false
+          commit_message: "Deploy da versão {{ github.sha }} para o branch de release"
