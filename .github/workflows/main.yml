@@ -24,7 +24,7 @@ jobs:
       # Fazer o deploy via FTP para a Hostinger
       - name: Deploy to FTP server
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
-        with:
+        env:
           server: ${{ secrets.FTP_SERVER }}  # O servidor FTP da Hostinger
           username: ${{ secrets.FTP_USER }}  # Nome de usuário FTP (adicionado nos secrets)
           password: ${{ secrets.FTP_PASSW }}  # Senha FTP (adicionado nos secrets)
