@@ -1,20 +1,32 @@
-name: Deploy para Branch de Release
+name: Deploy to Hostinger
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main  # Defina o branch que você quer usar para deploy (ex: main)
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - name: Executar testes
-        run: npm test
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
+      # Checkout do repositório
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Instalar dependências e construir o projeto
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the project
+        run: npm run build
+
+      # Fazer o deploy via FTP para a Hostinger
+      - name: Deploy to FTP server
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          branch: main 
-          folder: dist
-          clean: false
-          commit_message: "Deploy da versão {{ github.sha }} para o branch de release"
+          server: ${{ secrets.FTP_HOST }}  # O servidor FTP da Hostinger
+          username: ${{ secrets.FTP_USERNAME }}  # Nome de usuário FTP (adicionado nos secrets)
+          password: ${{ secrets.FTP_PASSWORD }}  # Senha FTP (adicionado nos secrets)
+          local-dir: dist  # Diretório local onde está o build
+          server-dir: /public_html/  # Diretório remoto no servidor FTP
