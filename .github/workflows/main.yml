@@ -30,11 +30,11 @@ jobs:
 
       # Fazer o deploy via FTP para a Hostinger
       - name: Deploy to FTP server
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        uses: SamKirkland/FTP-Deploy-Action@4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER }}  # O servidor FTP da Hostinger
-          username: ${{ secrets.FTP_USER }}   # Nome de usuário FTP (adicionado nos secrets)
-          password: ${{ secrets.FTP_PASSW }}   # Senha FTP (adicionado nos secrets)
+          server: ftp://portifoliogabrielmarques.com  # O servidor FTP da Hostinger
+          username: u608914209   # Nome de usuário FTP (adicionado nos secrets)
+          password: ${{ secrets.FTP_PASSWORD }}   # Senha FTP (adicionado nos secrets)
           local-dir: dist                      # Diretório local onde está o build
           server-dir: /public_html/            # Diretório remoto no servidor FTP
           port: 21                             # Porta do servidor FTP
