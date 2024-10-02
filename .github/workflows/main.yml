@@ -12,12 +12,18 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v4
-    
+
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ${{ secrets.ftoh_server }}
+        server: ${{ secrets.ftph_server }}  # Corrigi de ftoh_server para ftph_server
         username: ${{ secrets.ftph_user }}
         password: ${{ secrets.ftph_password }}
         protocol: ftp
         port: 21
+
+    - name: Debug secrets
+      run: |
+        echo "Server: ${{ secrets.ftph_server }}"
+        echo "Username: ${{ secrets.ftph_user }}"
+        echo "Password length: ${#{{ secrets.ftph_password }}}"
