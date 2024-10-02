@@ -16,8 +16,8 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ${{ FTP_USERNAME_HOSTINGER.ftoh_server }}
-        username: ${{ FTP_USERNAME_HOSTINGER.ftph_user }}
-        password: ${{ FTP_USERNAME_HOSTINGER.ftph_password }}
+        server: ${{ var.ftoh_server }}
+        username: ${{ var.ftph_user }}
+        password: ${{ var.ftph_password }}
         protocol: ftp
         port: 21
