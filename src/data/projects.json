@@ -1,0 +1,28 @@
+{
+    "projects":[
+     {
+      "stack": "BACKEND",
+      "description": "Esse foi o meu primeiro CRUD com C#, é uma linguagem que estou estudando e aprendendo muito, e vejo muito futuro nela, mas claro, temos que ter uma base sólida para poder avançar na linguagem e nada melhor como praticar um CRUD ",
+      "image": "../capa-project-1.jpg",
+      "icons": [
+          {"icon":"../c-sharp.png"},
+          {"icon":"../logo-swagger.png"},
+          {"icon":"../sqlite.png"},
+          {"icon":"../ef.png"}
+    ],
+      "link": "https://github.com/GabrielCostaMarques/CrudCSharp.git"
+     },
+     {
+      "stack": "FRONTEND",
+      "description": " e vejo muito potencial de aprendizado com ele, podendo fazer muitas integrações.",
+      "image": "../homeAurora.jpg",
+      "icons": [
+          {"icon":"../react.svg"},
+          {"icon":"../react-router.png"},
+          {"icon":"../Firebase.png"}
+    ],
+      "link": "https://aurora.portifoliogabrielmarques.com/"
+     }
+    
+    ]
+    }
