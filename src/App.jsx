@@ -13,7 +13,6 @@ function App() {
       <MainBody />
       <AboutMe />
       <MyProfile />
-      <FormsEmail/>
       
     </>
   )
