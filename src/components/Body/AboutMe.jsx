@@ -19,7 +19,6 @@ export default function AboutMe() {
                     <AiFillInstagram className={style.icons} />
                     <AiFillLinkedin className={style.icons} />
                     <AiFillFacebook className={style.icons} />
-
                 </div>
             </div>
 
@@ -27,5 +26,3 @@ export default function AboutMe() {
         </section>
     )
 }
-
-//className={style.ContainerIcons}

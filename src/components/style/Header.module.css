@@ -12,12 +12,11 @@
       width: 100%;
       text-align: center;
       display: inline-block;
-      
       cursor: pointer;
 }
 
 .headerContent nav a{
-    margin-right: 50px;
+    margin-right: 10px;
     color: var(---global-font-color);
     font-weight: 500;
     letter-spacing: 2px;
@@ -44,4 +43,18 @@
   
   a:hover::after {
     transform: scaleX(1);
+  }
+
+  @media(max-width:768px){
+
+    .headerContent{
+      width: 100%;
+
+
+      nav a{
+        background-color: var(---global-element-color);
+        padding: 10px;
+        border-radius: 10px;
+      }
+    }
   }

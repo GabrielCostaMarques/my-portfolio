@@ -26,8 +26,9 @@
 
 .TagProject{
     
-    color: var(---global-font-color);
-    background-color: var(---global-element-color);
+    color: var(---global-element-color);
+    border: 1px solid var(---global-element-color);
+    background-color: transparent;
     padding: 5px 10px;
     border-radius: 13px;
   
@@ -63,5 +64,36 @@
     p{
         margin-left: 20px;
         width: 80%;
+    }
+}
+
+
+@media (max-width:768px) {
+    .ProjectsBlocks{
+        width: 80vw;
+        display: block;
+    }
+
+    .BoxTags{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-height: 92px;
+        align-items: center;
+        gap: 26px;
+    }
+    
+    .BoxIcon{
+        justify-content: center;
+        display: flex;
+    }
+
+    .Info{
+        flex-direction: column;
+
+
+        p{
+            text-align: center;
+        }
     }
 }
