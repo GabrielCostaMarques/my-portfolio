@@ -75,16 +75,33 @@
 
     .BodyMain{
       display: block;
+      padding-top: 7em;
     }
 
     .MainBodyContent_left,.MainBodyContent_right{
         width: 100%;
         padding: 0px;
-    }
+        margin-top: 100px !important;
 
-    .MainBodyContent_right img{
-        width: 100%;
-        height: 80%;
+      }
+      
+
+    .ImgSummary{
+      position: absolute;
+      top: 140px;
+      width: 41% !important;
+      height: auto;
+      left: 200px;
+    }
+    
+      .MainBodyContent_right img{
+        width: 80%;
+        height: auto;
+        animation: slideInUp 2s forwards;
+    }
+      .MainBodyContent_left img{
+        width: 80%;
+        height: auto;
         animation: slideInUp 2s forwards;
     }
 

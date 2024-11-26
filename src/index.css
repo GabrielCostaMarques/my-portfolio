@@ -12,7 +12,6 @@
 
 body{
   margin: 0 !important;
-  max-width: 768px;
   overflow-x: hidden !important;
   background-color: var(---global-body-color);
   display: flex;
@@ -68,6 +67,10 @@ button:hover{
 @media (max-width:768px) {
   h1,h2,h3,h4,h5,p,a {
     padding: 10px;
+  }
+
+  body{
+    max-width: 768px;
   }
 }
 
