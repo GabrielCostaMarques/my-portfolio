@@ -6,7 +6,7 @@ export default function MyProfile() {
 
     return (
         <section className={style.BodyProjects} id="projetos">
-            <h2 style={{ display: 'block', width: '100%', marginLeft: 10 }}>PROJETOS</h2>
+            <h2 style={{ display: 'block', marginLeft: 10 }}>PROJETOS</h2>
 
             <div>
                 {datas.map((data) => (
@@ -14,7 +14,7 @@ export default function MyProfile() {
                         {/* Tags e Ícones */}
                         <div className={style.BoxTags}>
                             <div className={style.BoxTagOne}> <span className={style.TagProject}>{data.stack}</span></div>
-                           
+
                             <div className={style.BoxIcon}>
                                 {data.icons.map((icon, idx) => (
                                     <img
@@ -36,14 +36,13 @@ export default function MyProfile() {
                                     className={style.ProjectImage}
                                 />
                             </div>
+                            <div className={style.InfoDescription}>
                                 <p>{data.description}<br></br><br></br><br></br>
-                                {data.link && (
-                                    <button className={style.ProjectLink} onClick={() => window.open(data.link, "_blank")}> Ver Projeto</button>
-
-
-                                )}
                                 </p>
-                            
+                                    {data.link && (
+                                        <button className={style.ProjectLink} onClick={() => window.open(data.link, "_blank")}> Ver Projeto</button>
+                                    )}
+                            </div>
                         </div>
 
                     </div>

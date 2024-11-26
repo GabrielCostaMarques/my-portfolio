@@ -26,7 +26,7 @@ body{
 } */
 
 section{
-  padding-top: 15em;
+  padding-top: 8em;
   display: flex;
   align-items: center;
   margin: 0;
@@ -55,6 +55,8 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
   transition: 0.5s;
+  min-width: 140px;
+  
 }
 
 button:hover{
