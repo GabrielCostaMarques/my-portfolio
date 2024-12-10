@@ -14,7 +14,7 @@
      },
      {
       "stack": "FRONTEND",
-      "description": " e vejo muito potencial de aprendizado com ele, podendo fazer muitas integrações.",
+      "description": "Essa é um ecommerce que estou criando, onde pratico o que estou estudando e vejo muito potencial de aprendizado com ele, podendo fazer muitas integrações.",
       "image": "../homeAurora.jpg",
       "icons": [
           {"icon":"../react.svg"},
@@ -22,6 +22,16 @@
           {"icon":"../Firebase.png"}
     ],
       "link": "https://aurora.portifoliogabrielmarques.com/"
+     },
+
+     {
+      "stack": "BACKEND",
+      "description": "Esse é um exercício prático usando listas em C#",
+      "image": "../taskExercicie.jpg",
+      "icons": [
+        {"icon":"../c-sharp.png"}
+    ],
+      "link": "https://github.com/GabrielCostaMarques/CourseCsharp/tree/master/CourseCsharp/TaskExercicie"
      }
     
     ]

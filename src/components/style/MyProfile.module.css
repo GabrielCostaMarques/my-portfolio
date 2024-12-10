@@ -36,6 +36,7 @@
 
 .ProjectImage{
     width: 400px;
+
     border-radius: 20px;
 }
 
@@ -59,18 +60,20 @@
     flex-direction: row;
     width: 100%;
     justify-content: left;
-    align-items: start;
+    align-items: stretch;
     gap: 20px;
 
     p{
-        width: 80%;
+        margin: 0;
+       
     }
 
     .InfoDescription{
-        
+
         display: flex;
         flex-direction: column;
         justify-content:space-between ;
+        padding-bottom: 5px;
     }
 
     .ProjectLink{
@@ -112,5 +115,9 @@
             margin-left: 0;
             width: 100%;
         }
+    }
+
+    .ProjectImage{
+        width: 100%;
     }
 }
